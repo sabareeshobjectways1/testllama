@@ -11,9 +11,8 @@ export default async function handler(req, res) {
         <h2>Prompt: ${prompt}</h2>
         <pre id="output">Loading model...</pre>
         <script type="module">
-          import * as webllm from "https://esm.sh/@mlc-ai/web-llm";
-          const engine = new webllm.MLCEngine();
-          await engine.reload("Llama-2-7b-chat-hf-q4f16_1");
+          import * as webllm from "https://esm.sh/@mlc-ai/web-llm@0.2.79";
+          const engine = await webllm.CreateMLCEngine("Llama-2-7b-chat-hf-q4f16_1");
           const reply = await engine.chat.completions.create({
             messages: [{ role: "user", content: ${JSON.stringify(prompt)} }],
           });
