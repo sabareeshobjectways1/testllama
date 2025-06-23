@@ -1,16 +1,13 @@
+// File: package.json
 {
-  "name": "web-llm-api-vercel",
+  "name": "puter-prompt-api",
   "version": "1.0.0",
-  "private": true,
+  "description": "A simple API to echo a prompt, deployable to Vercel.",
+  "main": "api/echo.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "start": "echo 'No start script, deploy to Vercel'",
+    "dev": "vercel dev"
   },
-  "dependencies": {
-    "@mlc-ai/web-llm": "^0.2.79",
-    "next": "13.4.19",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+  "author": "Your Name",
+  "license": "ISC"
 }
