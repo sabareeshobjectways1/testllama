@@ -39,7 +39,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${OPENROUTER_API_KEY}`
+        "Authorization": `Bearer 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`
       },
       body: JSON.stringify(payload)
     });
